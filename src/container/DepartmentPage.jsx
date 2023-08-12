@@ -13,7 +13,7 @@ const DepartmentPage = () => {
   return (
     <div className='hStack'>
         <Navbar />
-        <div className='listItemsSection vStack gap'>
+        <div className='listItemsSection p-auto'>
             {
                 foundItems.map((item, index) => {
                     return <ItemCard data={item} key={index} />

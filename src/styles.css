@@ -6,12 +6,8 @@
 ul{
     list-style: none;
 }
-img{
-    width: 100px;
-    height: auto;
-}
 table, td, th {
-    border: 1px solid black;
+    border: 1px solid rgb(230, 230, 230);
 }
 table {
     border-collapse: collapse;
@@ -20,16 +16,29 @@ table {
 th, td {
     padding: 1rem;
 }
-
+select{
+    width: 100px;
+    padding: 4px;
+    border-radius: 4px;
+}
 /* common styles */
+.btn{
+    width: max-content;
+    padding: 5px 8px;
+    border: .5px solid black;
+    border-radius: 4px;
+    background-color: rgb(25, 182, 255);
+}
 .hStack{
     display: flex;
     flex-direction: row;
-    height: fit-content;
 }
 .vStack{
     display: flex;
     flex-direction: column;
+}
+.s-gap{
+    gap:.4rem
 }
 .gap{
     gap: 1rem;
@@ -37,18 +46,38 @@ th, td {
 .flex{
     display: flex;
 }
-
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.m-auto{
+    margin: 1rem;
+}
+.p-auto{
+    padding: 1rem;
+}
+.j-center{
+    justify-content: center;
+}
+.a-center{
+    align-items: center;
+}
+.checkbox{
+    width: 16px;
+}
+/* navbar styles */
 .navbar{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2.4rem;
     font-size: 24px;
     color: rgb(226, 226, 226);
     background-color: rgb(58, 58, 58);
-    padding: 1rem;
+    padding: 4rem;
     max-width: fit-content;
-    height: 100%;
+    min-height: 100vh;
+    max-height: max-content;
 }
+/* dashboard styles */
 .dashCard{
     width: 200px;
     height: 150px;
@@ -59,7 +88,48 @@ th, td {
     background-color: whitesmoke;
     border-radius: 8px;
 }
+.dashCardItem{
+    font-size: 32px;
+    font-weight: 600;
+}
+.highlight1{
+    color: green;
+}
+.highlight2{
+    color: orange;
+}
+.highlight3{
+    color: red;
+}
+/* Products page */
+.table-image{
+    width: 100px;
+}
+/* Single Product page styles */
 .productImg{
     width: 400px;
     height: auto;
+}
+/* department page styles */
+.listItemsSection{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 16px;
+}
+/* Items card styles */
+.itemCard{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 280px;
+    height: max-content;
+    padding: 8px 8px 24px 8px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    object-fit: contain;
+}
+.price-stock-section{
+    display: flex;
+    gap: 2rem;
 }

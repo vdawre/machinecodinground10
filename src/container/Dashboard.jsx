@@ -8,9 +8,9 @@ const Dashboard = () => {
   return (
     <div className='hStack'>
         <Navbar />
-        <div className='hStack gap'>
+        <div className='hStack gap p-auto'>
             <div className='dashCard'>
-                <p>
+                <p className='dashCardItem highlight1'>
                 {
                     state.reduce((acc,curr)=> acc += curr.stock, 0)
                 }
@@ -18,7 +18,7 @@ const Dashboard = () => {
                 <p>Total Stock</p>
             </div>
             <div className='dashCard'>
-                <p>
+                <p className='dashCardItem highlight2'>
                 {
                     state.reduce((acc,curr)=> acc += curr.delivered, 0)
                 }
@@ -26,7 +26,7 @@ const Dashboard = () => {
                 <p>Total Delivered</p>
             </div>
             <div className='dashCard'>
-                <p>
+                <p className='dashCardItem highlight3'>
                 {
                     state.reduce((acc,curr)=>{
                         if(curr.stock <= 10){

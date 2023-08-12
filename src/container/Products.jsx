@@ -47,24 +47,24 @@ const Products = () => {
   return (
     <div className='hStack'>
       <Navbar />
-      <div className='vStack gap'>
-        <div className='filterSection hStack gap'>
-          <p>Products</p>
-          <div className='hStack gap'>
+      <div className='vStack gap p-auto'>
+        <div className='filterSection hStack gap a-center'>
+          <h2>Products</h2>
+          <div className='hStack gap a-center'>
             <select onChange={(e) => setSelectedDepartment(e.target.value)}>
               <option value='All'>All</option>
               <option value='Kitchen'>Kitchen</option>
               <option value='Clothing'>Clothing</option>
               <option value='Toys'>Toys</option>
             </select>
-            <div>
+            <div className='hStack s-gap'>
               <input type='checkbox' id='lowStockCheckbox' onChange={(e) => {
                 if (e.target.checked === true) {
                   setIsLowStockChecked(true)
                 } else {
                   setIsLowStockChecked(false)
                 }
-              }}></input>
+              }} className='checkbox'></input>
               <label htmlFor='lowStockCheckbox'>Low Stock Items</label>
             </div>
             <select onChange={(e) => setSortType(e.target.value)}>
@@ -72,7 +72,7 @@ const Products = () => {
               <option value='price'>Price</option>
               <option value='stock'>Stock</option>
             </select>
-            <button>Add new product</button>
+            <button className='btn'>Add new product</button>
           </div>
         </div>
         <div className='listProducts vStack gap'>
@@ -90,7 +90,7 @@ const Products = () => {
                 const { id, imageUrl, name, description, price, stock, supplier } = item
                 return (
                   <tr key={index} onClick={() => navigate(`/products/${id}`)}>
-                    <td><img src={imageUrl} alt='product'/></td>
+                    <td><img src={imageUrl} alt='product' className='table-image'/></td>
                     <td>{name}</td>
                     <td>{description}</td>
                     <td>{price}</td>

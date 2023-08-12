@@ -11,13 +11,13 @@ const Departments = () => {
   return (
     <div className='hStack'>
       <Navbar />
-      <div className='hStack gap'>
+      <div className='hStack gap p-auto'>
         {
           departments.map((department, index) => {
             return (
-            <div key={index} className='dashCard' onClick={() => navigate(`/${department}`)}>
+            <h2 key={index} className='dashCard' onClick={() => navigate(`/${department}`)}>
             {department}
-            </div>
+            </h2>
           )})
         }
       </div>

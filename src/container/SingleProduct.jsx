@@ -14,8 +14,8 @@ const SingleProduct = () => {
   return (
     <div className='hStack'>
         <Navbar />
-        <div className='vStack gap'>
-            <h2>{productId.name}</h2>
+        <div className='vStack gap p-auto'>
+            <h2>{foundProduct.name}</h2>
             <img src={foundProduct.imageUrl} alt="product" className='productImg'/>
             <p>Price: {foundProduct.price}</p>
             <p>Stock: {foundProduct.stock}</p>
